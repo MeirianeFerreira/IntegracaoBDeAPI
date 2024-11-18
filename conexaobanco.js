@@ -1,20 +1,13 @@
 const mysql = require('mysql');
 
-// Variável que armazena a conexão
-const connectBanco = mysql.createConnection({
-  host: 'localhost', // Define o endereço do servidor MySQL
-  user: 'root', // Nome de usuário para autenticação no banco de dados
-  password: '', // Senha correspondente ao usuário do MySQL
+// Cria um pool de conexões
+const pool = mysql.createPool({
+  connectionLimit: 10, // Número máximo de conexões no pool
+  host: 'localhost',
+  user: 'root',
+  password: '',
   database: 'cadastrohappylife'
 });
 
-conexaobanco.connect((err) => {
-  if (err) {
-    console.error('Erro ao conectar ao banco de dados:', err);
-    return;
-  }
-  console.log('Conectado ao banco de dados.');
-});
-
-// Exporta a conexão do banco de dados para ser utilizada em outros arquivos do projeto
-module.exports = conexaobanco;
+// Exporta o pool para ser utilizado em outros arquivos do projeto
+module.exports = pool;

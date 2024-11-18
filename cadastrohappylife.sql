@@ -2,7 +2,7 @@
 CREATE DATABASE cadastrohappylife;
 
 
--- Criação da tabela `pesquisadores`
+-- Criação da tabela `dadoscliente`
 CREATE TABLE dadoscliente (
   codcliente INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(50) NOT NULL,

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+    <title>Lista de Clientes</title>
+</head>
+
+<body>
+    <header>
+        <nav class="divlogo">
+            <img class="logo" src="/logolifehappy.png" alt="Logo Life Happy">
+        </nav>
+    </header>
+    <main>
+        <section class="table-container">
+            <h1>Lista de Clientes</h1>
+            <table class="cliente-table">
+                <tr>
+                    <th>ID Cliente</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>E-mail</th>
+                    <th>WhatsApp</th>
+                    <th>CEP</th>
+                    <th>Logradouro</th>
+                    <th>Número</th>
+                    <th>Complemento</th>
+                    <th>Bairro</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>Excluir</th>
+                    <th>Alterar</th>
+
+                </tr>
+                <% if (dadoscliente.length > 0) { %>
+                    <% for (var i = 0; i < dadoscliente.length; i++) { %>
+                        <tr>
+                            <td><%- dadoscliente[i].codcliente %></td>
+                            <td><%- dadoscliente[i].nome %></td>
+                            <td><%- dadoscliente[i].sobrenome %></td>
+                            <td><%- dadoscliente[i].email %></td>
+                            <td><%- dadoscliente[i].whatsapp %></td>
+                            <td><%- dadoscliente[i].cep %></td>
+                            <td><%- dadoscliente[i].logradouro %></td>
+                            <td><%- dadoscliente[i].numero %></td>
+                            <td><%- dadoscliente[i].complemento %></td>
+                            <td><%- dadoscliente[i].bairro %></td>
+                            <td><%- dadoscliente[i].cidade %></td>
+                            <td><%- dadoscliente[i].estado %></td>
+                            <td><a href="/delete-dadoscliente?codcliente= <%- dadoscliente[i].codcliente %>" >Excluir</a></td>
+                            <td><a href="/update-dadoscliente?codcliente= <%- dadoscliente[i].codcliente %>" >Alterar</a></td>
+                        </tr>
+                    <% } %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="12" class="banco0">Não temos clientes no Banco de Dados!</td>
+                    </tr>
+                <% } %>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

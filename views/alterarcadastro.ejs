@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <nav class="divlogo">
+            <img class="logo" src="/logolifehappy.png" alt="Logo Life Happy">
+        </nav>
+    </header>
+    <main>
+        <section class="form-container">
+            <h1>Alterar Cadastro</h1>
+<form action="" method="POST">
+    <input type="hidden" name="codcliente" value="<%= dadoscliente.codcliente %>">
+    <input type="text" name="nome" placeholder="Nome" value="<%= dadoscliente.nome %>">
+    <input type="text" name="sobrenome" placeholder="Sobrenome" value="<%= dadoscliente.sobrenome %>" >
+    <input type="email" name="email" placeholder="E-mail" value="<%= dadoscliente.email %>" >
+    <input type="number" name="whatsapp" placeholder="WhatsApp" value="<%= dadoscliente.whatsapp %>" >
+    <input type="number" name="cep" placeholder="CEP" value="<%= dadoscliente.cep %>" >
+    <input type="text" name="logradouro" placeholder="Logradouro" value="<%= dadoscliente.logradouro %>" >
+    <input type="text" name="numero" placeholder="Número" value="<%= dadoscliente.numero %>" >
+    <input type="text" name="complemento" placeholder="Complemento" value="<%= dadoscliente.complemento %>">
+    <input type="text" name="bairro" placeholder="Bairro" value="<%= dadoscliente.bairro %>" >
+    <input type="text" name="cidade" placeholder="Cidade" value="<%= dadoscliente.cidade %>">
+    <input type="text" name="estado" placeholder="Estado" value="<%= dadoscliente.estado %>" >
+
+    <button type="submit">Alterar</button>
+</form>
+        </section>
+    </main>
+</body>
+
+</html>
