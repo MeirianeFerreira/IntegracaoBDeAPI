@@ -32,7 +32,6 @@
                     <th>Bairro</th>
                     <th>Cidade</th>
                     <th>Estado</th>
-                    <th>Excluir</th>
                     <th>Alterar</th>
 
                 </tr>
@@ -51,7 +50,6 @@
                             <td><%- dadoscliente[i].bairro %></td>
                             <td><%- dadoscliente[i].cidade %></td>
                             <td><%- dadoscliente[i].estado %></td>
-                            <td><a href="/delete-dadoscliente?codcliente= <%- dadoscliente[i].codcliente %>" >Excluir</a></td>
                             <td><a href="/update-dadoscliente?codcliente= <%- dadoscliente[i].codcliente %>" >Alterar</a></td>
                         </tr>
                     <% } %>
